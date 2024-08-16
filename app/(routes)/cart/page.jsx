@@ -4,6 +4,8 @@ import { CartItem } from "@/components/CartItem";
 import { CartSummary } from "@/components/CartSummary";
 import { useCart } from "@/app/store/hooks/cartCalculations";
 import { CheckOutButton } from "@/components/CheckOutButton";
+import { useRecoilValue } from "recoil";
+import { cartCountState } from "@/app/store/atoms/cartState";
 
 export default function Cart() {
   const {
@@ -18,6 +20,7 @@ export default function Cart() {
   const subtotal = calculateSubtotal();
   const discountAmount = calculateDiscountAmount();
   const total = calculateDiscountedTotal();
+  const cartCount = useRecoilValue(cartCountState);
 
   return (
     <div className="container mx-auto p-4 pt-14">
@@ -48,6 +51,7 @@ export default function Cart() {
               subtotal={subtotal}
               discountAmount={discountAmount}
               total={total}
+              cartCount={cartCount}
             />
             <CheckOutButton />
           </div>

@@ -1,12 +1,11 @@
-// src/components/CartSummary.jsx
-export function CartSummary({ subtotal, discountAmount, total }) {
+export function CartSummary({ subtotal, discountAmount, total, cartCount }) {
   return (
     <div className="shadow-slate-100 shadow-xl rounded-lg p-4">
       <h2 className="text-xl font-bold">Cart Summary</h2>
       <hr className="my-2 border-gray-300" />
       <div className="mt-2 space-y-2">
         <div className="flex justify-between font-light">
-          <p>Price</p>
+          <p>Price ({cartCount} items)</p>
           <p>${subtotal.toFixed(2)}</p>
         </div>
         <div className="flex justify-between text-green-600 font-light">
