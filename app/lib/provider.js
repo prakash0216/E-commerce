@@ -7,10 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 export const Providers = ({ children }) => {
   return (
     <RecoilRoot>
-      <SessionProvider>
-        {children}
-        <ToastContainer position="top-center" />
-      </SessionProvider>
+      {children}
+      <ToastContainer position="top-center" />
     </RecoilRoot>
   );
 };

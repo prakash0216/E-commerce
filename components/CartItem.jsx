@@ -7,11 +7,11 @@ export function CartItem({ item, onQuantityChange, onRemove }) {
       <img
         src={item.image}
         alt={item.name}
-        className="w-16 h-16 object-cover mr-4"
+        className="w-16 h-16 object-contain mr-4"
       />
       <div className="flex-grow">
-        <h2 className="text-lg font-semibold">{item.title}</h2>
-        <p className="text-gray-600">${item.price.toFixed(2)}</p>
+        <h2 className=" font-light ">{item.title}</h2>
+        <p className="text-gray-600 font-semibold">${item.price.toFixed(2)}</p>
         <div className="flex mt-2">
           <QuantityControlButton
             itemId={item.id}

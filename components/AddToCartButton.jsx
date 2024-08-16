@@ -11,7 +11,7 @@ export function AddToCartButton({ product }) {
   const handleAddToCart = () => {
     addToCart(product);
     toast.success(`${product.title} added to cart`, {
-      autoClose: 800,
+      autoClose: 1000,
     });
     setIsAnimating(true);
     setTimeout(() => {
